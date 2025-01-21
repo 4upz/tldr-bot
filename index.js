@@ -125,7 +125,7 @@ async function handleSummarize(context, timeframeArg) {
     }
 
     // 4) Fetch up to 100 messages
-    const fetchedMessages = await channel.messages.fetch({ limit: 250 });
+    const fetchedMessages = await channel.messages.fetch({ limit: 100 });
     const relevant = fetchedMessages.filter(
       (msg) => msg.createdTimestamp >= startTime.getTime(),
     );
